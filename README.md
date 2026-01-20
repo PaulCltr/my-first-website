@@ -6,6 +6,7 @@
   <title>Paul Coulter , Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <header>
@@ -43,12 +44,18 @@
   <section>
     <h2>Links</h2>
     <ul>
-      <li><a href="https://github.com/PaulCltr" target="_blank" rel="noopener">GitHub profile</a></li>
+      <li>
+        <a href="https://github.com/PaulCltr" target="_blank" rel="noopener">
+          GitHub profile
+        </a>
+      </li>
     </ul>
   </section>
 
   <footer>
-    <p>Last updated , edit this site any time by changing index.html and style.css</p>
+    <p>
+      Last updated , edit this site any time by changing index.html and style.css
+    </p>
   </footer>
 
 </body>
