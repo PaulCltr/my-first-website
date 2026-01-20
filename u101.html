@@ -6,31 +6,6 @@
   <title>U101 , Paul Coulter</title>
   <link rel="stylesheet" href="style.css">
 </head>
-  <script>
-  const button = document.getElementById("themeToggle");
-  const root = document.documentElement;
-
-  function setButtonText() {
-    button.textContent = root.classList.contains("dark")
-      ? "Light mode"
-      : "Dark mode";
-  }
-
-  button.addEventListener("click", () => {
-    root.classList.toggle("dark");
-    localStorage.setItem(
-      "theme",
-      root.classList.contains("dark") ? "dark" : "light"
-    );
-    setButtonText();
-  });
-
-  if (localStorage.getItem("theme") === "dark") {
-    root.classList.add("dark");
-  }
-
-  setButtonText();
-</script>
 
 <body>
 
@@ -47,20 +22,35 @@
       <a href="index.html">Home</a>
       <a href="index.html#modules">Modules</a>
       <a href="index.html#projects">Projects</a>
+      <a href="tm111.html">TM111</a>
+      <a href="tm112.html">TM112</a>
+      <a href="u101.html">U101</a>
       <a href="https://github.com/PaulCltr" target="_blank" rel="noopener">GitHub</a>
     </nav>
   </header>
 
   <main>
+
     <section>
-    <h2>U101</h2>
+      <h2>U101</h2>
       <p>
-        This page is for my U101 work, notes, and small practice tasks.
+        This page is for my U101 work. I use it to capture my design thinking process,
+        reflections, and examples of practical design work from everyday life.
       </p>
       <ul>
-        <li>Topic list, add your topics here</li>
-        <li>Links to projects, add later</li>
-        <li>Study notes, add later</li>
+        <li>Problem framing and observation</li>
+        <li>Idea generation and creative sessions</li>
+        <li>Prototypes, testing, and reflection</li>
+        <li>Notes on what I learned and what I would improve</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Quick links</h2>
+      <ul>
+        <li>My reflections , coming soon</li>
+        <li>Prototype notes , coming soon</li>
+        <li>Examples and screenshots , coming soon</li>
       </ul>
     </section>
 
@@ -68,13 +58,41 @@
       <h2>Downloads</h2>
       <p>PDF downloads coming soon.</p>
       <ul>
-        <li><a href="#" aria-disabled="true">TM111 notes PDF , coming soon</a></li>
+        <li>U101 summaries PDF , coming soon</li>
       </ul>
     </section>
+
   </main>
 
   <footer>
     <p>Last updated , edit anytime in GitHub</p>
   </footer>
 
- 
+  <script>
+    const button = document.getElementById("themeToggle");
+    const root = document.documentElement;
+
+    function setButtonText() {
+      button.textContent = root.classList.contains("dark")
+        ? "Light mode"
+        : "Dark mode";
+    }
+
+    button.addEventListener("click", () => {
+      root.classList.toggle("dark");
+      localStorage.setItem(
+        "theme",
+        root.classList.contains("dark") ? "dark" : "light"
+      );
+      setButtonText();
+    });
+
+    if (localStorage.getItem("theme") === "dark") {
+      root.classList.add("dark");
+    }
+
+    setButtonText();
+  </script>
+
+</body>
+</html>
