@@ -8,10 +8,12 @@
 </head>
 <body>
 
-  <header>
+    <header>
     <h1>Paul Coulter</h1>
     <p class="tagline">Computing and IT student , building practical projects step by step</p>
+    <button class="toggle" id="themeToggle" type="button">Dark mode</button>
   </header>
+
 
   <section>
     <h2>About</h2>
@@ -59,6 +61,29 @@
   <footer>
     <p>Last updated , edit this site any time by changing index.html and style.css</p>
   </footer>
-
-</body>
 </html>
+  <script>
+    const button = document.getElementById("themeToggle");
+
+    function setButtonText() {
+      if (document.body.classList.contains("dark")) {
+        button.textContent = "Light mode";
+      } else {
+        button.textContent = "Dark mode";
+      }
+    }
+
+    button.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+      setButtonText();
+    });
+
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      document.body.classList.add("dark");
+    }
+    setButtonText();
+  </script>
+</body>
+
