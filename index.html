@@ -49,26 +49,23 @@
     <section id="modules">
       <h2>Modules</h2>
       <ul>
-        <li><strong><a href="tm111.html">TM111</a></strong> , Introduction to computing and information technology 1</li>
-        <li><strong><a href="tm112.html">TM112</a></strong> , Introduction to computing and information technology 2</li>
-        <li><strong><a href="u101.html">U101</a></strong> , Design thinking , creativity for the 21st century</li>
+        <li><a href="tm111.html">TM111</a> , Introduction to computing and information technology 1</li>
+        <li><a href="tm112.html">TM112</a> , Introduction to computing and information technology 2</li>
+        <li><a href="u101.html">U101</a> , Design thinking , creativity for the 21st century</li>
       </ul>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
       <ul>
-        <li><strong>My first GitHub Pages site</strong> , this page you are viewing now</li>
-        <li><strong>Open University work</strong> , notes and small practice tasks</li>
-        <li><strong>Future project</strong> , a simple multi page portfolio site</li>
+        <li>My first GitHub Pages site</li>
+        <li>Open University work and practice tasks</li>
+        <li>Future multi page portfolio site</li>
       </ul>
     </section>
 
     <section id="downloads">
       <h2>Downloads</h2>
-      <p>
-        I will add PDFs and reference material here as I progress through my modules.
-      </p>
       <ul>
         <li><a href="html-tags.html">TM111 , HTML Tag List</a></li>
         <li>TM112 revision notes PDF , coming soon</li>
@@ -76,14 +73,37 @@
       </ul>
     </section>
 
-    <section>
-      <h2>Links</h2>
-      <ul>
-        <li><a href="https://github.com/PaulCltr" target="_blank" rel="noopener">GitHub profile</a></li>
-      </ul>
-    </section>
-
   </main>
 
   <footer>
-    <p>Last updated , edit this site any time by changing index.h
+    <p>Last updated , edit this site any time by changing index.html and style.css</p>
+  </footer>
+
+  <script>
+    const button = document.getElementById("themeToggle");
+    const root = document.documentElement;
+
+    function setButtonText() {
+      button.textContent = root.classList.contains("dark")
+        ? "Light mode"
+        : "Dark mode";
+    }
+
+    button.addEventListener("click", () => {
+      root.classList.toggle("dark");
+      localStorage.setItem(
+        "theme",
+        root.classList.contains("dark") ? "dark" : "light"
+      );
+      setButtonText();
+    });
+
+    if (localStorage.getItem("theme") === "dark") {
+      root.classList.add("dark");
+    }
+
+    setButtonText();
+  </script>
+
+</body>
+</html>
