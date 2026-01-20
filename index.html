@@ -6,6 +6,32 @@
   <title>Paul Coulter , Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
+  <script>
+  const button = document.getElementById("themeToggle");
+  const root = document.documentElement;
+
+  function setButtonText() {
+    button.textContent = root.classList.contains("dark")
+      ? "Light mode"
+      : "Dark mode";
+  }
+
+  button.addEventListener("click", () => {
+    root.classList.toggle("dark");
+    localStorage.setItem(
+      "theme",
+      root.classList.contains("dark") ? "dark" : "light"
+    );
+    setButtonText();
+  });
+
+  if (localStorage.getItem("theme") === "dark") {
+    root.classList.add("dark");
+  }
+
+  setButtonText();
+</script>
+
 <body>
 
      <header class="siteHeader">
@@ -88,29 +114,3 @@
     <p>Last updated , edit this site any time by changing index.html and style.css</p>
   </footer>
 </html>
-<script>
-  const button = document.getElementById("themeToggle");
-  const root = document.documentElement;
-
-  function setButtonText() {
-    button.textContent = root.classList.contains("dark")
-      ? "Light mode"
-      : "Dark mode";
-  }
-
-  button.addEventListener("click", () => {
-    root.classList.toggle("dark");
-    localStorage.setItem(
-      "theme",
-      root.classList.contains("dark") ? "dark" : "light"
-    );
-    setButtonText();
-  });
-
-  if (localStorage.getItem("theme") === "dark") {
-    root.classList.add("dark");
-  }
-
-  setButtonText();
-</script>
-
