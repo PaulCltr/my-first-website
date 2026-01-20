@@ -14,11 +14,11 @@ body {
 }
 
 /* Smooth transitions */
-html, body, header, section, footer, a, .toggle, h1, h2, .tagline, .nav a {
+html, body, .siteHeader, section, footer, a, .toggle, h1, h2, .tagline, .nav a {
   transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
-/* Header and title */
+/* Header */
 .siteHeader {
   border-bottom: 4px solid #0057b8;
   padding-bottom: 14px;
@@ -100,9 +100,67 @@ a:hover {
 
 /* Toggle button */
 .toggle {
-  display: inline-block;
   padding: 10px 14px;
   border-radius: 6px;
   border: 1px solid #0057b8;
   background: #ffffff;
-  color: #00
+  color: #003a8f;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Footer */
+footer {
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid #ccc;
+  font-size: 14px;
+  color: #555;
+}
+
+/* ===== Dark mode , FULL PAGE ===== */
+
+html.dark,
+html.dark body {
+  background-color: #0f172a;
+  color: #e5e7eb;
+}
+
+html.dark .siteHeader {
+  border-bottom-color: #60a5fa;
+}
+
+html.dark h1,
+html.dark h2 {
+  color: #93c5fd;
+}
+
+html.dark .tagline {
+  color: #cbd5e1;
+}
+
+html.dark section {
+  background-color: #111827;
+  border-left-color: #60a5fa;
+}
+
+html.dark a {
+  color: #93c5fd;
+}
+
+html.dark .nav a {
+  background-color: #111827;
+  border-color: #334155;
+  color: #e5e7eb;
+}
+
+html.dark .toggle {
+  background-color: #111827;
+  border-color: #60a5fa;
+  color: #e5e7eb;
+}
+
+html.dark footer {
+  border-top-color: #334155;
+  color: #cbd5e1;
+}
