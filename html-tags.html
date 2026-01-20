@@ -6,6 +6,7 @@
   <title>HTML Tag List , Paul Coulter</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <header class="siteHeader">
@@ -27,6 +28,13 @@
   </header>
 
   <main>
+
+    <section>
+      <p>
+        This page is a simple reference I created to help me learn and remember
+        common HTML tags while studying TM111.
+      </p>
+    </section>
 
     <section>
       <h2>Structure tags</h2>
@@ -71,6 +79,17 @@
     </section>
 
     <section>
+      <h2>Self closing tags</h2>
+      <ul>
+        <li><strong>&lt;br&gt;</strong> , line break</li>
+        <li><strong>&lt;img&gt;</strong> , image</li>
+      </ul>
+      <p>
+        These tags do not need a closing tag.
+      </p>
+    </section>
+
+    <section>
       <h2>Media</h2>
       <ul>
         <li><strong>&lt;img&gt;</strong> , image</li>
@@ -87,20 +106,27 @@
 
   <script>
     const button = document.getElementById("themeToggle");
+    const root = document.documentElement;
 
     function setButtonText() {
-      button.textContent = document.body.classList.contains("dark") ? "Light mode" : "Dark mode";
+      button.textContent = root.classList.contains("dark")
+        ? "Light mode"
+        : "Dark mode";
     }
 
     button.addEventListener("click", () => {
-      document.body.classList.toggle("dark");
-      localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+      root.classList.toggle("dark");
+      localStorage.setItem(
+        "theme",
+        root.classList.contains("dark") ? "dark" : "light"
+      );
       setButtonText();
     });
 
     if (localStorage.getItem("theme") === "dark") {
-      document.body.classList.add("dark");
+      root.classList.add("dark");
     }
+
     setButtonText();
   </script>
 
