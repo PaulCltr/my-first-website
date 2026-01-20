@@ -6,6 +6,32 @@
   <title>U101 , Paul Coulter</title>
   <link rel="stylesheet" href="style.css">
 </head>
+  <script>
+  const button = document.getElementById("themeToggle");
+  const root = document.documentElement;
+
+  function setButtonText() {
+    button.textContent = root.classList.contains("dark")
+      ? "Light mode"
+      : "Dark mode";
+  }
+
+  button.addEventListener("click", () => {
+    root.classList.toggle("dark");
+    localStorage.setItem(
+      "theme",
+      root.classList.contains("dark") ? "dark" : "light"
+    );
+    setButtonText();
+  });
+
+  if (localStorage.getItem("theme") === "dark") {
+    root.classList.add("dark");
+  }
+
+  setButtonText();
+</script>
+
 <body>
 
   <header class="siteHeader">
@@ -51,29 +77,4 @@
     <p>Last updated , edit anytime in GitHub</p>
   </footer>
 
-  <script>
-    const button = document.getElementById("themeToggle");
-
-    function setButtonText() {
-      if (document.body.classList.contains("dark")) {
-        button.textContent = "Light mode";
-      } else {
-        button.textContent = "Dark mode";
-      }
-    }
-
-    button.addEventListener("click", () => {
-      document.body.classList.toggle("dark");
-      localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
-      setButtonText();
-    });
-
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      document.body.classList.add("dark");
-    }
-    setButtonText();
-  </script>
-
-</body>
-</html>
+ 
