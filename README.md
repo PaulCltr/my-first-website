@@ -1,5 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paul Coulter , Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-  <h1>Paul Coulter</h1>
-  <p>Computing & IT student with The Open University.</p>
-  <p>This site is part of my learning journey using GitHub and GitHub Pages.</p>
+
+  <header>
+    <h1>Paul Coulter</h1>
+    <p class="tagline">Computing and IT student , building practical projects step by step</p>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <p>
+      Hi, I am Paul. I am studying Computing and IT with The Open University.
+      This website is where I practice and show my progress as I learn web development and computing basics.
+    </p>
+  </section>
+
+  <section>
+    <h2>Skills I am learning</h2>
+    <ul>
+      <li>HTML and CSS</li>
+      <li>GitHub and version control</li>
+      <li>Problem solving and design thinking</li>
+      <li>Basic Python and computing concepts</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>My first GitHub Pages site</strong> , this page you are viewing now</li>
+      <li><strong>Open University work</strong> , notes and small practice tasks</li>
+      <li><strong>Future project</strong> , a simple multi page portfolio site</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Links</h2>
+    <ul>
+      <li><a href="https://github.com/PaulCltr" target="_blank" rel="noopener">GitHub profile</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Last updated , edit this site any time by changing index.html and style.css</p>
+  </footer>
+
 </body>
+</html>
