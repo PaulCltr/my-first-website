@@ -1,10 +1,14 @@
+body, header, section, footer, a, .toggle, h1, h2, .tagline {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   background-color: #f5f7fa;
   color: #222;
   max-width: 900px;
   margin: 0 auto;
-  padding: 32px 20px;
+  padding: 28px 18px;
   line-height: 1.7;
 }
 
@@ -28,9 +32,9 @@ h1 {
 
 section {
   background-color: #ffffff;
-  padding: 24px;
-  margin-bottom: 24px;
-  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 18px;
+  border-radius: 10px;
   border-left: 6px solid #0057b8;
 }
 
@@ -115,3 +119,40 @@ body.dark .toggle {
   background: #111827;
   color: #e5e7eb;
 }
+.siteHeader {
+  border-bottom: 4px solid #0057b8;
+  padding-bottom: 14px;
+  margin-bottom: 22px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.nav {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nav a {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff;
+}
+
+.nav a:hover {
+  text-decoration: none;
+  border-color: #0057b8;
+}
+
+body.dark .nav a {
+  background-color: #111827;
+  border-color: #334155;
+}
+
