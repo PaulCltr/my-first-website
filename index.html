@@ -6,35 +6,10 @@
   <title>Paul Coulter , Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
-  <script>
-  const button = document.getElementById("themeToggle");
-  const root = document.documentElement;
-
-  function setButtonText() {
-    button.textContent = root.classList.contains("dark")
-      ? "Light mode"
-      : "Dark mode";
-  }
-
-  button.addEventListener("click", () => {
-    root.classList.toggle("dark");
-    localStorage.setItem(
-      "theme",
-      root.classList.contains("dark") ? "dark" : "light"
-    );
-    setButtonText();
-  });
-
-  if (localStorage.getItem("theme") === "dark") {
-    root.classList.add("dark");
-  }
-
-  setButtonText();
-</script>
 
 <body>
 
-     <header class="siteHeader">
+  <header class="siteHeader">
     <div class="titleRow">
       <div>
         <h1>Paul Coulter</h1>
@@ -51,66 +26,64 @@
     </nav>
   </header>
 
+  <main>
 
+    <section>
+      <h2>About</h2>
+      <p>
+        Hi, I am Paul. I am studying Computing and IT with The Open University.
+        This website is where I practice and show my progress as I learn web development and computing basics.
+      </p>
+    </section>
 
-  <section>
-    <h2>About</h2>
-    <p>
-      Hi, I am Paul. I am studying Computing and IT with The Open University.
-      This website is where I practice and show my progress as I learn web development and computing basics.
-    </p>
-  </section>
+    <section>
+      <h2>Skills I am learning</h2>
+      <ul>
+        <li>HTML and CSS</li>
+        <li>GitHub and version control</li>
+        <li>Problem solving and design thinking</li>
+        <li>Basic Python and computing concepts</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Skills I am learning</h2>
-    <ul>
-      <li>HTML and CSS</li>
-      <li>GitHub and version control</li>
-      <li>Problem solving and design thinking</li>
-      <li>Basic Python and computing concepts</li>
-    </ul>
-  </section>
- 
-  <section id="modules">
-    <h2>Modules</h2>
-    <ul>
-      <li><strong><a href="tm111.html">TM111</a></strong> , Introduction to computing and information technology 1</li>
-      <li><strong><a href="tm112.html">TM112</a></strong> , Introduction to computing and information technology 2</li>
-      <li><strong><a href="u101.html">U101</a></strong> , Design thinking , creativity for the 21st century</li>
-    </ul>
-  </section>
+    <section id="modules">
+      <h2>Modules</h2>
+      <ul>
+        <li><strong><a href="tm111.html">TM111</a></strong> , Introduction to computing and information technology 1</li>
+        <li><strong><a href="tm112.html">TM112</a></strong> , Introduction to computing and information technology 2</li>
+        <li><strong><a href="u101.html">U101</a></strong> , Design thinking , creativity for the 21st century</li>
+      </ul>
+    </section>
 
-
-  <section>
     <section id="projects">
-    <h2>Projects</h2>
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>My first GitHub Pages site</strong> , this page you are viewing now</li>
+        <li><strong>Open University work</strong> , notes and small practice tasks</li>
+        <li><strong>Future project</strong> , a simple multi page portfolio site</li>
+      </ul>
+    </section>
 
-    <ul>
-      <li><strong>My first GitHub Pages site</strong> , this page you are viewing now</li>
-      <li><strong>Open University work</strong> , notes and small practice tasks</li>
-      <li><strong>Future project</strong> , a simple multi page portfolio site</li>
-    </ul>
-  </section>
-  <section id="downloads">
-    <h2>Downloads</h2>
-    <p>
-      I will add PDFs here later, for example cheat sheets and revision notes.
-    </p>
-    <ul>
-      <li><a href="#" aria-disabled="true">TM111 - <a href="html-tags.html">HTML Tags</a>
-      <li><a href="#" aria-disabled="true">TM112 revision notes PDF , coming soon</a></li>
-      <li><a href="#" aria-disabled="true">U101 summaries PDF , coming soon</a></li>
-    </ul>
-  </section>
+    <section id="downloads">
+      <h2>Downloads</h2>
+      <p>
+        I will add PDFs and reference material here as I progress through my modules.
+      </p>
+      <ul>
+        <li><a href="html-tags.html">TM111 , HTML Tag List</a></li>
+        <li>TM112 revision notes PDF , coming soon</li>
+        <li>U101 summaries PDF , coming soon</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Links</h2>
-    <ul>
-      <li><a href="https://github.com/PaulCltr" target="_blank" rel="noopener">GitHub profile</a></li>
-    </ul>
-  </section>
+    <section>
+      <h2>Links</h2>
+      <ul>
+        <li><a href="https://github.com/PaulCltr" target="_blank" rel="noopener">GitHub profile</a></li>
+      </ul>
+    </section>
+
+  </main>
 
   <footer>
-    <p>Last updated , edit this site any time by changing index.html and style.css</p>
-  </footer>
-</html>
+    <p>Last updated , edit this site any time by changing index.h
