@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TM111 , Paul Coulter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="siteHeader">
+    <div class="titleRow">
+      <div>
+        <h1>Paul Coulter</h1>
+        <p class="tagline">Computing and IT student , portfolio</p>
+      </div>
+      <button class="toggle" id="themeToggle" type="button">Dark mode</button>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#modules">Modules</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="https://github.com/PaulCltr" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>TM111</h2>
+      <p>
+        This page is for my TM111 work, notes, and small practice tasks.
+      </p>
+      <ul>
+        <li>Topic list, add your topics here</li>
+        <li>Links to projects, add later</li>
+        <li>Study notes, add later</li>
+      </ul>
+    </section>
+
+    <section id="downloads">
+      <h2>Downloads</h2>
+      <p>PDF downloads coming soon.</p>
+      <ul>
+        <li><a href="#" aria-disabled="true">TM111 notes PDF , coming soon</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Last updated , edit anytime in GitHub</p>
+  </footer>
+
+  <script>
+    const button = document.getElementById("themeToggle");
+
+    function setButtonText() {
+      if (document.body.classList.contains("dark")) {
+        button.textContent = "Light mode";
+      } else {
+        button.textContent = "Dark mode";
+      }
+    }
+
+    button.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+      setButtonText();
+    });
+
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      document.body.classList.add("dark");
+    }
+    setButtonText();
+  </script>
+
+</body>
+</html>
