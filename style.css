@@ -1,48 +1,66 @@
-/* ===== Dark mode (FULL PAGE) ===== */
-
-html.dark {
-  background-color: #0f172a;
-  color: #e5e7eb;
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #222;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 20px;
+  line-height: 1.7;
 }
 
-/* Header */
-html.dark header {
-  border-bottom-color: #60a5fa;
+header {
+  border-bottom: 4px solid #0057b8;
+  padding-bottom: 16px;
+  margin-bottom: 32px;
 }
 
-/* Headings */
-html.dark h1,
-html.dark h2 {
-  color: #93c5fd;
+h1 {
+  font-size: 36px;
+  margin: 0;
+  color: #003a8f;
 }
 
-/* Tagline */
-html.dark .tagline {
-  color: #cbd5e1;
+.tagline {
+  margin-top: 8px;
+  font-size: 18px;
+  color: #444;
 }
 
-/* Content sections */
-html.dark section {
-  background-color: #111827;
-  border-left-color: #60a5fa;
+section {
+  background-color: #ffffff;
+  padding: 24px;
+  margin-bottom: 24px;
+  border-radius: 6px;
+  border-left: 6px solid #0057b8;
 }
 
-/* Navigation buttons */
-html.dark .nav a {
-  background-color: #111827;
-  border-color: #334155;
-  color: #e5e7eb;
+h2 {
+  margin-top: 0;
+  font-size: 22px;
+  color: #003a8f;
 }
 
-/* Toggle button */
-html.dark .toggle {
-  background-color: #111827;
-  border-color: #60a5fa;
-  color: #e5e7eb;
+ul {
+  padding-left: 20px;
 }
 
-/* Footer */
-html.dark footer {
-  border-top-color: #334155;
-  color: #cbd5e1;
+li {
+  margin-bottom: 8px;
+}
+
+a {
+  color: #0057b8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px solid #ccc;
+  font-size: 14px;
+  color: #555;
 }
