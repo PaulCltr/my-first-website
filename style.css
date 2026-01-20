@@ -1,21 +1,35 @@
-body, header, section, footer, a, .toggle, h1, h2, .tagline {
-  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+/* ===== Base layout , Open University student vibe ===== */
+
+html {
+  background-color: #f5f7fa;
+  color: #222;
 }
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #f5f7fa;
-  color: #222;
   max-width: 900px;
   margin: 0 auto;
   padding: 28px 18px;
   line-height: 1.7;
 }
 
-header {
+/* Smooth transitions */
+html, body, header, section, footer, a, .toggle, h1, h2, .tagline, .nav a {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+/* Header and title */
+.siteHeader {
   border-bottom: 4px solid #0057b8;
-  padding-bottom: 16px;
-  margin-bottom: 32px;
+  padding-bottom: 14px;
+  margin-bottom: 22px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
 }
 
 h1 {
@@ -30,6 +44,7 @@ h1 {
   color: #444;
 }
 
+/* Sections */
 section {
   background-color: #ffffff;
   padding: 20px;
@@ -44,6 +59,7 @@ h2 {
   color: #003a8f;
 }
 
+/* Lists */
 ul {
   padding-left: 20px;
 }
@@ -52,6 +68,7 @@ li {
   margin-bottom: 8px;
 }
 
+/* Links */
 a {
   color: #0057b8;
   text-decoration: none;
@@ -61,60 +78,31 @@ a:hover {
   text-decoration: underline;
 }
 
-footer {
-  margin-top: 40px;
-  padding-top: 16px;
-  border-top: 1px solid #ccc;
-  font-size: 14px;
-  color: #555;
-}
-/* ===== Dark mode (FULL PAGE) ===== */
-
-html.dark {
-  background-color: #0f172a;
-  color: #e5e7eb;
+/* Nav bar */
+.nav {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-/* Header */
-html.dark header {
-  border-bottom-color: #60a5fa;
+.nav a {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff;
 }
 
-/* Headings */
-html.dark h1,
-html.dark h2 {
-  color: #93c5fd;
-}
-
-/* Tagline */
-html.dark .tagline {
-  color: #cbd5e1;
-}
-
-/* Content sections */
-html.dark section {
-  background-color: #111827;
-  border-left-color: #60a5fa;
-}
-
-/* Navigation buttons */
-html.dark .nav a {
-  background-color: #111827;
-  border-color: #334155;
-  color: #e5e7eb;
+.nav a:hover {
+  text-decoration: none;
+  border-color: #0057b8;
 }
 
 /* Toggle button */
-html.dark .toggle {
-  background-color: #111827;
-  border-color: #60a5fa;
-  color: #e5e7eb;
-}
-
-/* Footer */
-html.dark footer {
-  border-top-color: #334155;
-  color: #cbd5e1;
-}
-
-
+.toggle {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #0057b8;
+  background: #ffffff;
+  color: #00
