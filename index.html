@@ -1,109 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Paul Coulter , Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
   <header class="siteHeader">
-    <div class="titleRow">
-      <div>
+    <div class="container headerRow">
+      <div class="brand">
         <h1>Paul Coulter</h1>
-        <p class="tagline">Computing and IT student , building practical projects step by step</p>
+        <p class="tagline">Computing and IT student , portfolio</p>
       </div>
-      <button class="toggle" id="themeToggle" type="button">Dark mode</button>
-    </div>
 
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="#modules">Modules</a>
-      <a href="#projects">Projects</a>
-      <a href="https://github.com/PaulCltr" target="_blank" rel="noopener">GitHub</a>
-    </nav>
+      <nav class="nav">
+        <a class="active" href="index.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="cv.html">CV</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-
-    <section>
-      <h2>About</h2>
+  <main class="container">
+    <section class="card">
+      <h2>About me</h2>
       <p>
-        Hi, I am Paul. I am studying Computing and IT with The Open University.
-        This website is where I practice and show my progress as I learn web development and computing basics.
+        I am a Computing and IT student with the Open University, currently studying towards a Diploma of Higher Education
+        in Computing and IT and a second subject. I am building a solid foundation in programming, computing systems,
+        and problem solving.
       </p>
+      <p>
+        This site is my portfolio. It shows my projects, evidence, and what I am learning as I work through TM111, TM112,
+        and U101.
+      </p>
+
+      <div class="buttonRow">
+        <a class="button" href="projects.html">View projects</a>
+        <a class="button buttonSecondary" href="cv.html">View CV</a>
+      </div>
     </section>
 
-    <section>
-      <h2>Skills I am learning</h2>
-      <ul>
-        <li>HTML and CSS</li>
-        <li>GitHub and version control</li>
-        <li>Problem solving and design thinking</li>
-        <li>Basic Python and computing concepts</li>
-      </ul>
-    </section>
+    <section class="grid">
+      <article class="card">
+        <h3>Skills I am building</h3>
+        <ul>
+          <li>Programming fundamentals, sequence, selection, iteration</li>
+          <li>Variables, lists, basic data handling</li>
+          <li>Testing, debugging, logical problem solving</li>
+          <li>HTML and CSS</li>
+        </ul>
+      </article>
 
-    <section id="modules">
-      <h2>Modules</h2>
-      <ul>
-        <li><a href="tm111.html">TM111</a> , Introduction to computing and information technology 1</li>
-        <li><a href="tm112.html">TM112</a> , Introduction to computing and information technology 2</li>
-        <li><a href="u101.html">U101</a> , Design thinking , creativity for the 21st century</li>
-      </ul>
+      <article class="card">
+        <h3>Quick links</h3>
+        <ul>
+          <li><a href="tm111.html">TM111 work</a></li>
+          <li><a href="tm112.html">TM112 work</a></li>
+          <li><a href="u101.html">U101 work</a></li>
+        </ul>
+        <p class="muted">Last updated automatically from this GitHub repository.</p>
+      </article>
     </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li>My first GitHub Pages site</li>
-        <li>Open University work and practice tasks</li>
-        <li>Future multi page portfolio site</li>
-      </ul>
-    </section>
-
-    <section id="downloads">
-      <h2>Downloads</h2>
-      <ul>
-        <li><a href="html-tags.html">TM111 , HTML Tag List</a></li>
-        <li>TM112 revision notes PDF , coming soon</li>
-        <li>U101 summaries PDF , coming soon</li>
-      </ul>
-    </section>
-
   </main>
 
-  <footer>
-    <p>Last updated , edit this site any time by changing index.html and style.css</p>
+  <footer class="siteFooter">
+    <div class="container footerRow">
+      <p>© <span id="year"></span> Paul Coulter</p>
+      <p class="muted">Portfolio evidence available on request</p>
+    </div>
   </footer>
 
   <script>
-    const button = document.getElementById("themeToggle");
-    const root = document.documentElement;
-
-    function setButtonText() {
-      button.textContent = root.classList.contains("dark")
-        ? "Light mode"
-        : "Dark mode";
-    }
-
-    button.addEventListener("click", () => {
-      root.classList.toggle("dark");
-      localStorage.setItem(
-        "theme",
-        root.classList.contains("dark") ? "dark" : "light"
-      );
-      setButtonText();
-    });
-
-    if (localStorage.getItem("theme") === "dark") {
-      root.classList.add("dark");
-    }
-
-    setButtonText();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>
