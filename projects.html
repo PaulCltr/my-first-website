@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects , Paul Coulter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="siteHeader">
+    <div class="container headerRow">
+      <div class="brand">
+        <h1>Paul Coulter</h1>
+        <p class="tagline">Projects</p>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">About</a>
+        <a class="active" href="projects.html">Projects</a>
+        <a href="cv.html">CV</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Projects</h2>
+      <p class="muted">
+        Click into each module page to see the full write up and evidence.
+      </p>
+    </section>
+
+    <section class="stack">
+      <article class="card">
+        <h3><a href="tm111.html">TM111 , Programming and problem solving</a></h3>
+        <p>
+          Scratch programs showing algorithms, variables, lists, loops, conditionals, plus testing and debugging.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3><a href="tm112.html">TM112 , Introduction to computing and IT</a></h3>
+        <p>
+          Coursework and practical tasks as I progress through TM112, with evidence added as I complete activities.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3><a href="u101.html">U101 , Design thinking</a></h3>
+        <p>
+          Problem framing, sketches, reflection, and design communication, based on user needs and context.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="container footerRow">
+      <p>© <span id="year"></span> Paul Coulter</p>
+      <p class="muted">Projects updated as I learn</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
