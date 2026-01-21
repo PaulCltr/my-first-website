@@ -140,3 +140,48 @@ li{ margin: 6px 0; }
   border: 1px solid rgba(255,255,255,0.15);
   margin-top: 10px;
 }
+/* Make older pages match the container layout */
+main{
+  width: min(100%, 980px);
+  margin: 0 auto;
+  padding: 18px;
+}
+
+main section{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  margin-top: 14px;
+}
+
+/* Make your existing header structure (titleRow) match the new layout */
+.titleRow{
+  width: min(100%, 980px);
+  margin: 0 auto;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.toggle{
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--button2);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Make footer match siteFooter style without changing your HTML */
+footer{
+  width: min(100%, 980px);
+  margin: 26px auto 0 auto;
+  padding: 18px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+}
