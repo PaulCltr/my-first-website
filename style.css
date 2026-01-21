@@ -185,3 +185,6 @@ footer{
   border-top: 1px solid var(--border);
   color: var(--muted);
 }
+.nav a[aria-current="page"]{
+  background: var(--button);
+}
