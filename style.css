@@ -188,3 +188,24 @@ footer{
 .nav a[aria-current="page"]{
   background: var(--button);
 }
+html.dark{
+  --bg: #0b0d12;
+  --card: #121625;
+  --text: #e9ecf3;
+  --muted: #b6bdd1;
+  --border: #242a3a;
+  --link: #dfe6ff;
+  --button: #1a2442;
+  --button2: transparent;
+}
+
+html:not(.dark){
+  --bg: #ffffff;
+  --card: #f6f7fb;
+  --text: #12131a;
+  --muted: #4a5163;
+  --border: #d6dbea;
+  --link: #1b3cff;
+  --button: #e8ecff;
+  --button2: transparent;
+}
