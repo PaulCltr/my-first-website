@@ -1,3 +1,11 @@
+/* FORCE DARK MODE */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #0f172a;
+  color: #e5e7eb;
+  font-family: Arial, sans-serif;
+}
 /* Theme tokens */
 html.dark{
   --bg: #0b0d12;
