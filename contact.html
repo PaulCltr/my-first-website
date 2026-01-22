@@ -8,33 +8,46 @@
 </head>
 
 <body>
+
   <header class="siteHeader">
     <div class="container headerRow">
       <div class="brand">
         <h1>Paul Coulter</h1>
-        <p class="tagline">Contact</p>
+        <p class="tagline">Computing and IT student , portfolio</p>
       </div>
 
-      <nav class="nav">
+      <nav class="nav" aria-label="Primary navigation">
         <a href="index.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="cv.html">CV</a>
-        <a class="active" href="contact.html">Contact</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+        <a href="tm111.html">TM111</a>
+        <a href="tm112.html">TM112</a>
+        <a href="u101.html">U101</a>
+        <a href="https://github.com/PaulCltr" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <section class="card">
-      <h2>Contact</h2>
-      <p>If you would like to discuss an opportunity, please contact me.</p>
+
+    <section class="card" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <p>
+        If you would like to discuss an opportunity, please contact me using the details below.
+      </p>
+
       <ul>
-        <li><strong>Email</strong> , paulcltr@outlook.com</li>
-        <li><strong>Location</strong> , 13 Greeves Park, Strabane, BT829LG, Northern Ireland</li>
-        <li><strong>Telephone</strong> , (079) 2717 4954</li>
+        <li><strong>Email</strong> , <a href="mailto:paulcltr@outlook.com">paulcltr@outlook.com</a></li>
+        <li><strong>Telephone</strong> , <a href="tel:07927174954">079 2717 4954</a></li>
+        <li><strong>Location</strong> , Strabane, County Tyrone, Northern Ireland</li>
       </ul>
-      <p class="muted">Portfolio evidence and references available on request.</p>
+
+      <p class="muted">
+        Portfolio evidence and references are available on request.
+      </p>
     </section>
+
   </main>
 
   <footer class="siteFooter">
@@ -47,5 +60,6 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
