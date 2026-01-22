@@ -15,7 +15,6 @@
         <h1>Paul Coulter</h1>
         <p class="tagline">Computing and IT student , portfolio</p>
       </div>
-      <button class="toggle" id="themeToggle" type="button">Dark mode</button>
     </div>
 
     <nav class="nav">
@@ -29,9 +28,9 @@
     </nav>
   </header>
 
-  <main>
+  <main class="container">
 
-    <section>
+    <section class="card">
       <h2>TM111 Programming and Problem Solving</h2>
       <p>
         This page contains evidence from my TM111 work, including Scratch programs that demonstrate algorithms, variables,
@@ -39,7 +38,7 @@
       </p>
     </section>
 
-    <section>
+    <section class="card">
       <h2>Project 1 , Scratch program evidence</h2>
 
       <h3>Overview</h3>
@@ -106,44 +105,34 @@
         </p>
       </figure>
 
-      <h3>Short description of what the program does and how it works</h3>
+      <h3>Short description of how the program works</h3>
       <p>
         When the green flag is clicked, the program asks the user to calculate the price increase between an old price and
-        a new price. The user’s answer is stored in a variable and compared against the correct calculated value. If the
-        answer is correct, the program displays confirmation feedback. If the answer is incorrect, the program displays
-        the correct price increase.
+        a new price. The user’s answer is stored in a variable and compared against the correct value. Feedback is then
+        displayed based on the result.
       </p>
 
       <h3>Problem statement</h3>
       <p>
-        When learning programming, it can be difficult to understand how numerical data, user input, and conditional logic
-        work together in a single program. Without clear examples, learners may struggle to see how variables store values
-        and how decisions are made based on comparisons. This program demonstrates how user input can be processed,
-        checked, and responded to using variables and selection.
-      </p>
-
-      <h3>The idea</h3>
-      <p>
-        The idea was to create an interactive Scratch program that asks the user a question involving price changes,
-        calculates the correct answer internally, and then checks the user’s response to provide immediate feedback.
+        Beginners often struggle to understand how variables, user input, and conditional logic work together.
+        This program provides a clear example of storing data, checking values, and responding logically.
       </p>
 
       <h3>Brief reflection</h3>
       <p>
-        This idea was stronger than others because it clearly demonstrates multiple programming concepts working together,
-        including variables, calculations, user input, and conditional logic. The program also produces clear feedback,
-        making it easy to test, debug, and explain.
+        This program was effective because it combines multiple concepts into one clear example and provides immediate
+        feedback, making it easy to test, debug, and explain.
       </p>
     </section>
 
-    <section>
+    <section class="card">
       <h2>Quick links</h2>
       <ul>
         <li><a href="html-tags.html">HTML Tag List</a></li>
       </ul>
     </section>
 
-    <section id="downloads">
+    <section class="card" id="downloads">
       <h2>Downloads</h2>
       <ul>
         <li><a href="downloads/tm111_study_guide.pdf">TM111 Study Guide (PDF)</a></li>
@@ -153,35 +142,11 @@
 
   </main>
 
-  <footer>
-    <p>Last updated , edit anytime in GitHub</p>
+  <footer class="siteFooter">
+    <div class="container">
+      <p class="muted">Last updated , edit anytime in GitHub</p>
+    </div>
   </footer>
-
-  <script>
-    const button = document.getElementById("themeToggle");
-    const root = document.documentElement;
-
-    function setButtonText() {
-      button.textContent = root.classList.contains("dark")
-        ? "Light mode"
-        : "Dark mode";
-    }
-
-    button.addEventListener("click", () => {
-      root.classList.toggle("dark");
-      localStorage.setItem(
-        "theme",
-        root.classList.contains("dark") ? "dark" : "light"
-      );
-      setButtonText();
-    });
-
-    if (localStorage.getItem("theme") === "dark") {
-      root.classList.add("dark");
-    }
-
-    setButtonText();
-  </script>
 
 </body>
 </html>
