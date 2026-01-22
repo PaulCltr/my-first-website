@@ -10,36 +10,36 @@
 <body>
 
   <header class="siteHeader">
-    <div class="titleRow">
-      <div>
+    <div class="container headerRow">
+      <div class="brand">
         <h1>Paul Coulter</h1>
         <p class="tagline">Computing and IT student , portfolio</p>
       </div>
-    </div>
 
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="index.html#modules">Modules</a>
-      <a href="index.html#projects">Projects</a>
-      <a href="tm111.html" aria-current="page">TM111</a>
-      <a href="tm112.html">TM112</a>
-      <a href="u101.html">U101</a>
-      <a href="https://github.com/PaulCltr" target="_blank" rel="noopener">GitHub</a>
-    </nav>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#modules">Modules</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="tm111.html" aria-current="page">TM111</a>
+        <a href="tm112.html">TM112</a>
+        <a href="u101.html">U101</a>
+        <a href="https://github.com/PaulCltr" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
   </header>
 
   <main class="container">
 
-    <section class="card">
-      <h2>TM111 Programming and Problem Solving</h2>
+    <section class="card" aria-labelledby="tm111-title">
+      <h2 id="tm111-title">TM111 Programming and Problem Solving</h2>
       <p>
         This page contains evidence from my TM111 work, including Scratch programs that demonstrate algorithms, variables,
         lists, testing, and debugging.
       </p>
     </section>
 
-    <section class="card">
-      <h2>Project 1 , Scratch program evidence</h2>
+    <section class="card" aria-labelledby="proj1-title">
+      <h2 id="proj1-title">Project 1 , Scratch program evidence</h2>
 
       <h3>Overview</h3>
       <p>
@@ -71,8 +71,10 @@
         <img
           class="evidenceImg"
           src="images/tm111-scratch-program_1.png"
-          alt="Completed Scratch program showing blocks, variables, and logic"
+          alt="Scratch program showing blocks, variables, and logic"
           loading="lazy"
+          width="1200"
+          height="675"
         >
         <p class="tagline">
           Scratch program demonstrating variables, calculations, and conditional logic.
@@ -84,8 +86,10 @@
         <img
           class="evidenceImg"
           src="images/tm111-scratch-program_2.png"
-          alt="Scratch program output showing correct answer feedback"
+          alt="Scratch output showing correct answer feedback"
           loading="lazy"
+          width="1200"
+          height="675"
         >
         <p class="tagline">
           Program output showing confirmation feedback when the user enters the correct answer.
@@ -97,8 +101,10 @@
         <img
           class="evidenceImg"
           src="images/tm111-scratch-program_3.png"
-          alt="Scratch program output showing incorrect answer feedback"
+          alt="Scratch output showing incorrect answer feedback"
           loading="lazy"
+          width="1200"
+          height="675"
         >
         <p class="tagline">
           Program output showing corrective feedback when the user enters an incorrect answer.
@@ -118,25 +124,32 @@
         This program provides a clear example of storing data, checking values, and responding logically.
       </p>
 
+      <h3>The idea</h3>
+      <p>
+        The idea was to create an interactive Scratch program that asks the user a question involving price changes,
+        calculates the correct answer internally, and then checks the user’s response to provide immediate feedback.
+      </p>
+
       <h3>Brief reflection</h3>
       <p>
-        This program was effective because it combines multiple concepts into one clear example and provides immediate
-        feedback, making it easy to test, debug, and explain.
+        This idea was strong because it clearly demonstrates multiple programming concepts working together,
+        including variables, calculations, user input, and conditional logic. It also produces clear feedback,
+        which makes it easier to test, debug, and explain.
       </p>
     </section>
 
-    <section class="card">
-      <h2>Quick links</h2>
+    <section class="card" aria-labelledby="links-title">
+      <h2 id="links-title">Quick links</h2>
       <ul>
         <li><a href="html-tags.html">HTML Tag List</a></li>
       </ul>
     </section>
 
-    <section class="card" id="downloads">
-      <h2>Downloads</h2>
+    <section class="card" id="downloads" aria-labelledby="downloads-title">
+      <h2 id="downloads-title">Downloads</h2>
       <ul>
-        <li><a href="downloads/tm111_study_guide.pdf">TM111 Study Guide (PDF)</a></li>
-        <li><a href="downloads/TM111_TM112_Masterbook.pdf">TM111 and TM112 Master CheatSheet (PDF)</a></li>
+        <li><a href="downloads/tm111_study_guide.pdf">TM111 Study Guide , PDF</a></li>
+        <li><a href="downloads/TM111_TM112_Masterbook.pdf">TM111 and TM112 Master CheatSheet , PDF</a></li>
       </ul>
     </section>
 
