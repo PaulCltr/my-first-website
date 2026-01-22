@@ -8,6 +8,7 @@
 </head>
 
 <body>
+
   <header class="siteHeader">
     <div class="container headerRow">
       <div class="brand">
@@ -15,7 +16,7 @@
         <p class="tagline">Computing and IT student , portfolio</p>
       </div>
 
-      <nav class="nav">
+      <nav class="nav" aria-label="Primary navigation">
         <a href="index.html" aria-current="page">About</a>
         <a href="projects.html">Projects</a>
         <a href="cv.html">CV</a>
@@ -29,12 +30,12 @@
   </header>
 
   <main class="container">
-    <section class="card">
-      <h2>About me</h2>
+
+    <section class="card" aria-labelledby="about-title">
+      <h2 id="about-title">About me</h2>
       <p>
         I am a Computing and IT student with the Open University, currently studying towards a Diploma of Higher Education
-        in Computing and IT and a second subject. I am building a solid foundation in programming, computing systems,
-        and problem solving.
+        in Computing and IT. I am building a solid foundation in programming, computing systems, and problem solving.
       </p>
       <p>
         This site is my portfolio. It shows my projects, evidence, and what I am learning as I work through TM111, TM112,
@@ -48,8 +49,9 @@
     </section>
 
     <section class="grid">
-      <article class="card">
-        <h3>Skills I am building</h3>
+
+      <article class="card" aria-labelledby="skills-title">
+        <h3 id="skills-title">Skills I am building</h3>
         <ul>
           <li>Programming fundamentals, sequence, selection, iteration</li>
           <li>Variables, lists, basic data handling</li>
@@ -58,8 +60,8 @@
         </ul>
       </article>
 
-      <article class="card">
-        <h3>Quick links</h3>
+      <article class="card" aria-labelledby="links-title">
+        <h3 id="links-title">Quick links</h3>
         <ul>
           <li><a href="tm111.html">TM111 work</a></li>
           <li><a href="tm112.html">TM112 work</a></li>
@@ -67,7 +69,9 @@
         </ul>
         <p class="muted">Updated through GitHub Pages.</p>
       </article>
+
     </section>
+
   </main>
 
   <footer class="siteFooter">
@@ -80,6 +84,6 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
-<html lang="en" class="dark">
