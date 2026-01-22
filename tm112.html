@@ -10,29 +10,28 @@
 <body>
 
   <header class="siteHeader">
-    <div class="titleRow">
-      <div>
+    <div class="container headerRow">
+      <div class="brand">
         <h1>Paul Coulter</h1>
         <p class="tagline">Computing and IT student , portfolio</p>
       </div>
-      <button class="toggle" id="themeToggle" type="button">Dark mode</button>
-    </div>
 
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="index.html#modules">Modules</a>
-      <a href="index.html#projects">Projects</a>
-      <a href="tm111.html">TM111</a>
-      <a href="tm112.html" aria-current="page">TM112</a>
-      <a href="u101.html">U101</a>
-      <a href="https://github.com/PaulCltr" target="_blank" rel="noopener">GitHub</a>
-    </nav>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#modules">Modules</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="tm111.html">TM111</a>
+        <a href="tm112.html" aria-current="page">TM112</a>
+        <a href="u101.html">U101</a>
+        <a href="https://github.com/PaulCltr" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
+  <main class="container">
 
-    <section>
-      <h2>TM112</h2>
+    <section class="card" aria-labelledby="tm112-title">
+      <h2 id="tm112-title">TM112</h2>
       <p>
         This page is for my TM112 work, notes, and practical computing activities.
       </p>
@@ -43,17 +42,17 @@
       </ul>
     </section>
 
-    <section>
-      <h2>Quick links</h2>
+    <section class="card" aria-labelledby="quicklinks-title">
+      <h2 id="quicklinks-title">Quick links</h2>
       <ul>
         <li>Study notes , coming soon</li>
         <li>Practice exercises , coming soon</li>
       </ul>
     </section>
 
-    <section id="downloads">
-      <h2>Downloads</h2>
-      <p>PDF downloads coming soon.</p>
+    <section class="card" id="downloads" aria-labelledby="downloads-title">
+      <h2 id="downloads-title">Downloads</h2>
+      <p class="muted">PDF downloads coming soon.</p>
       <ul>
         <li>TM112 revision notes PDF , coming soon</li>
       </ul>
@@ -61,35 +60,11 @@
 
   </main>
 
-  <footer>
-    <p>Last updated , edit anytime in GitHub</p>
+  <footer class="siteFooter">
+    <div class="container">
+      <p class="muted">Last updated , edit anytime in GitHub</p>
+    </div>
   </footer>
-
-  <script>
-    const button = document.getElementById("themeToggle");
-    const root = document.documentElement;
-
-    function setButtonText() {
-      button.textContent = root.classList.contains("dark")
-        ? "Light mode"
-        : "Dark mode";
-    }
-
-    button.addEventListener("click", () => {
-      root.classList.toggle("dark");
-      localStorage.setItem(
-        "theme",
-        root.classList.contains("dark") ? "dark" : "light"
-      );
-      setButtonText();
-    });
-
-    if (localStorage.getItem("theme") === "dark") {
-      root.classList.add("dark");
-    }
-
-    setButtonText();
-  </script>
 
 </body>
 </html>
