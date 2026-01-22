@@ -1,51 +1,51 @@
-/* ================================
-   GLOBAL RESET AND DARK THEME
-================================ */
-
 :root{
   --bg: #0b0d12;
   --card: #121625;
+  --card2: #0f1320;
   --text: #e9ecf3;
   --muted: #b6bdd1;
   --border: #242a3a;
   --link: #dfe6ff;
   --button: #1a2442;
-  --button2: transparent;
+
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(0,0,0,0.35);
+  --max: 980px;
 }
 
-*{
-  box-sizing: border-box;
-}
+*{ box-sizing: border-box; }
 
 html, body{
   margin: 0;
   padding: 0;
-  font-family: system-ui, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.55;
+  font-family: system-ui, Arial, sans-serif;
+  line-height: 1.6;
 }
 
-/* ================================
-   LAYOUT
-================================ */
+img{ max-width: 100%; height: auto; }
+
+a{
+  color: var(--link);
+  text-decoration: none;
+}
+a:hover{ text-decoration: underline; }
 
 .container{
-  width: min(100%, 980px);
+  width: min(100%, var(--max));
   margin: 0 auto;
   padding: 18px;
 }
 
-/* ================================
-   HEADER
-================================ */
-
+/* Header */
 .siteHeader{
-  background: var(--card);
+  background: rgba(18, 22, 37, 0.9);
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 50;
+  backdrop-filter: blur(10px);
 }
 
 .headerRow{
@@ -54,23 +54,22 @@ html, body{
   justify-content: space-between;
   gap: 14px;
   flex-wrap: wrap;
+  padding: 12px 0;
 }
 
 .brand h1{
   margin: 0;
   font-size: 22px;
+  letter-spacing: 0.2px;
 }
 
 .tagline{
-  margin-top: 4px;
-  font-size: 14px;
+  margin: 4px 0 0 0;
   color: var(--muted);
+  font-size: 14px;
 }
 
-/* ================================
-   NAVIGATION
-================================ */
-
+/* Nav */
 .nav{
   display: flex;
   gap: 10px;
@@ -78,135 +77,116 @@ html, body{
 }
 
 .nav a{
-  color: var(--link);
-  text-decoration: none;
-  padding: 8px 12px;
+  display: inline-block;
+  padding: 9px 12px;
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 14px;
+  background: rgba(0,0,0,0.12);
 }
 
 .nav a[aria-current="page"]{
   background: var(--button);
+  border-color: rgba(223, 230, 255, 0.25);
 }
 
-/* ================================
-   CARDS AND GRIDS
-================================ */
+/* Main layout */
+main{
+  padding: 10px 0 26px 0;
+}
 
 .card{
-  background: var(--card);
+  background: linear-gradient(180deg, var(--card), var(--card2));
   border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 16px;
+  border-radius: var(--radius);
+  padding: 18px;
   margin-top: 14px;
+  box-shadow: var(--shadow);
+
+  /* subtle entrance */
+  opacity: 0;
+  transform: translateY(8px);
+  animation: cardIn 0.45s ease forwards;
 }
 
-.grid{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 14px;
-}
+.card:nth-child(2){ animation-delay: 0.05s; }
+.card:nth-child(3){ animation-delay: 0.10s; }
+.card:nth-child(4){ animation-delay: 0.15s; }
+.card:nth-child(5){ animation-delay: 0.20s; }
 
-@media (min-width: 760px){
-  .grid{
-    grid-template-columns: 1fr 1fr;
+@keyframes cardIn{
+  to{
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* ================================
-   TEXT
-================================ */
-
+/* Headings */
 h2{
   margin: 0 0 10px 0;
   font-size: 20px;
 }
 
 h3{
-  margin: 0 0 10px 0;
-  font-size: 18px;
+  margin: 14px 0 8px 0;
+  font-size: 17px;
 }
 
 h4{
   margin: 14px 0 6px 0;
-  font-size: 15px;
+  font-size: 14px;
   color: var(--muted);
+  letter-spacing: 0.2px;
 }
 
-p{
-  margin: 10px 0;
-}
+p{ margin: 10px 0; }
+.muted{ color: var(--muted); }
 
-.muted{
-  color: var(--muted);
-}
-
+/* Lists */
 ul{
-  margin: 10px 0 0 20px;
+  margin: 10px 0 0 18px;
   padding: 0;
 }
+li{ margin: 6px 0; }
 
-li{
-  margin: 6px 0;
-}
-
-/* ================================
-   BUTTONS
-================================ */
-
-.buttonRow{
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 12px;
-}
-
-.button{
-  display: inline-block;
-  padding: 10px 14px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: var(--button);
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.buttonSecondary{
-  background: var(--button2);
-}
-
-/* ================================
-   IMAGES AND EVIDENCE
-================================ */
-
+/* Evidence */
 .evidenceBlock{
   margin: 16px 0;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(0,0,0,0.12);
+}
+
+.evidenceBlock figcaption{
+  color: var(--text);
+  margin-bottom: 10px;
 }
 
 .evidenceImg{
   display: block;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
   border-radius: 12px;
-  border: 1px solid var(--border);
-  margin-top: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
-/* ================================
-   FOOTER
-================================ */
-
+/* Footer */
 .siteFooter{
-  margin-top: 26px;
+  margin-top: 20px;
   border-top: 1px solid var(--border);
+  padding: 14px 0 24px 0;
 }
 
-.footerRow{
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  flex-wrap: wrap;
+/* Mobile improvements */
+@media (max-width: 520px){
+  .container{ padding: 14px; }
+  .nav a{ width: 100%; text-align: center; }
+  h2{ font-size: 19px; }
+  .card{ padding: 16px; }
+}
+
+/* Accessibility, focus outline */
+a:focus, button:focus{
+  outline: 3px solid rgba(223, 230, 255, 0.35);
+  outline-offset: 3px;
 }
