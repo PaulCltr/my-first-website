@@ -1,13 +1,8 @@
-/* FORCE DARK MODE */
-html, body {
-  margin: 0;
-  padding: 0;
-  background-color: #0f172a;
-  color: #e5e7eb;
-  font-family: Arial, sans-serif;
-}
-/* Theme tokens */
-html.dark{
+/* ================================
+   GLOBAL RESET AND DARK THEME
+================================ */
+
+:root{
   --bg: #0b0d12;
   --card: #121625;
   --text: #e9ecf3;
@@ -18,41 +13,39 @@ html.dark{
   --button2: transparent;
 }
 
-html:not(.dark){
-  --bg: #ffffff;
-  --card: #f6f7fb;
-  --text: #12131a;
-  --muted: #4a5163;
-  --border: #d6dbea;
-  --link: #1b3cff;
-  --button: #e8ecff;
-  --button2: transparent;
+*{
+  box-sizing: border-box;
 }
 
-*{ box-sizing: border-box; }
-
-body{
+html, body{
   margin: 0;
+  padding: 0;
   font-family: system-ui, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.55;
 }
 
-/* Layout */
+/* ================================
+   LAYOUT
+================================ */
+
 .container{
   width: min(100%, 980px);
   margin: 0 auto;
   padding: 18px;
 }
 
-/* Header */
+/* ================================
+   HEADER
+================================ */
+
 .siteHeader{
+  background: var(--card);
   border-bottom: 1px solid var(--border);
-  background: rgba(0,0,0,0.08);
   position: sticky;
   top: 0;
-  backdrop-filter: blur(8px);
+  z-index: 100;
 }
 
 .headerRow{
@@ -69,12 +62,15 @@ body{
 }
 
 .tagline{
-  margin: 4px 0 0 0;
-  color: var(--muted);
+  margin-top: 4px;
   font-size: 14px;
+  color: var(--muted);
 }
 
-/* Nav */
+/* ================================
+   NAVIGATION
+================================ */
+
 .nav{
   display: flex;
   gap: 10px;
@@ -84,7 +80,7 @@ body{
 .nav a{
   color: var(--link);
   text-decoration: none;
-  padding: 8px 10px;
+  padding: 8px 12px;
   border: 1px solid var(--border);
   border-radius: 10px;
   font-size: 14px;
@@ -94,7 +90,10 @@ body{
   background: var(--button);
 }
 
-/* Cards */
+/* ================================
+   CARDS AND GRIDS
+================================ */
+
 .card{
   background: var(--card);
   border: 1px solid var(--border);
@@ -110,26 +109,52 @@ body{
 }
 
 @media (min-width: 760px){
-  .grid{ grid-template-columns: 1fr 1fr; }
+  .grid{
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-/* Text */
-h2{ margin: 0 0 10px 0; font-size: 20px; }
-h3{ margin: 0 0 10px 0; font-size: 18px; }
-h4{ margin: 14px 0 6px 0; font-size: 15px; color: var(--muted); }
+/* ================================
+   TEXT
+================================ */
 
-p{ margin: 10px 0; }
+h2{
+  margin: 0 0 10px 0;
+  font-size: 20px;
+}
 
-.muted{ color: var(--muted); }
+h3{
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+h4{
+  margin: 14px 0 6px 0;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+p{
+  margin: 10px 0;
+}
+
+.muted{
+  color: var(--muted);
+}
 
 ul{
   margin: 10px 0 0 20px;
   padding: 0;
 }
 
-li{ margin: 6px 0; }
+li{
+  margin: 6px 0;
+}
 
-/* Buttons */
+/* ================================
+   BUTTONS
+================================ */
+
 .buttonRow{
   display: flex;
   gap: 10px;
@@ -139,7 +164,7 @@ li{ margin: 6px 0; }
 
 .button{
   display: inline-block;
-  padding: 10px 12px;
+  padding: 10px 14px;
   border-radius: 12px;
   border: 1px solid var(--border);
   background: var(--button);
@@ -153,7 +178,10 @@ li{ margin: 6px 0; }
   background: var(--button2);
 }
 
-/* Evidence blocks */
+/* ================================
+   IMAGES AND EVIDENCE
+================================ */
+
 .evidenceBlock{
   margin: 16px 0;
 }
@@ -163,11 +191,14 @@ li{ margin: 6px 0; }
   max-width: 100%;
   height: auto;
   border-radius: 12px;
-  border: 1px solid rgba(0,0,0,0.2);
+  border: 1px solid var(--border);
   margin-top: 10px;
 }
 
-/* Footer */
+/* ================================
+   FOOTER
+================================ */
+
 .siteFooter{
   margin-top: 26px;
   border-top: 1px solid var(--border);
